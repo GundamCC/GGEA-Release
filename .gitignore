@@ -1,0 +1,4 @@
+# 发布包仅作为 GitHub Release 附件分发，避免二进制进入 Git 历史。
+*.zip
+*.zip.sha256
+*-verified/
