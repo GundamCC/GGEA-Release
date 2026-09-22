@@ -1,6 +1,6 @@
-# GGEA 下载与内测发布
+# GGEA 下载与发布
 
-GGEA 是《SD高达G世纪 永恒》的 Windows 桌面辅助工具。本仓库用于分发已打包的内测版本；程序源码不在此仓库中。
+GGEA 是《SD高达G世纪 永恒》的 Windows 桌面辅助工具。本仓库用于分发已完成自动检查和人工验证的 Release 版本；程序源码不在此仓库中。
 
 ## 下载
 
@@ -8,17 +8,17 @@ GGEA 是《SD高达G世纪 永恒》的 Windows 桌面辅助工具。本仓库�
 
 将 ZIP **完整解压**后启动 `GGEA.exe`。不要单独提取 EXE；程序还需要包内的 `config/`、`resources/`、`billing-runtime/` 和原生 DLL。完整包适用于 Windows 10/11 x64，不要求用户另装 .NET SDK、Python、NDK 或 JDK；需要 Android 模拟器和可用的 ADB。自动化画面要求 1920×1080 横屏。
 
-首次运行请阅读包内 `使用说明.txt` 和 `PRE-RELEASE.txt`，先确认设备与截图，再在有人看护的情况下逐项启用任务。出现识别失败、错位或意外弹窗时应立即停止。当前仍是内测版本，不承诺无人值守或未经验证的模拟器、Android、游戏版本和语言环境兼容。
+首次运行请阅读包内 `使用说明.txt` 和 `RELEASE.txt`，先确认设备与截图，再在有人看护的情况下逐项启用任务。出现识别失败、错位或意外弹窗时应立即停止。不承诺无人值守或未经验证的模拟器、Android、游戏版本和语言环境兼容。
 
 ## 校验下载
 
 在 PowerShell 中对下载的 ZIP 运行：
 
 ```powershell
-(Get-FileHash -Algorithm SHA256 -LiteralPath '.\GGEA-v0.9.4.1-pre-release-win-x64-48c9894cc69e.zip').Hash.ToLowerInvariant()
+(Get-FileHash -Algorithm SHA256 -LiteralPath '.\GGEA-v0.9.4.1-win-x64.zip').Hash.ToLowerInvariant()
 ```
 
-结果应与同名 `.zip.sha256` 文件第一列完全相同。SHA-256 用于检查文件完整性，不能代替数字签名。包内 `build-info.json` 记录构建使用的完整源码提交、版本、构建参数及逐文件摘要；每次发布的说明也会列出对应提交。
+结果应与同名 `.zip.sha256` 文件第一列完全相同。SHA-256 用于检查文件完整性，不能代替数字签名。包内 `build-info.json` 记录构建使用的完整源码提交、版本、构建参数及逐文件摘要；每次发布的说明也会列出对应提交。构建时的本地包名包含提交短号，GitHub Release 附件使用简洁版本名；两者的 ZIP 内容与摘要必须相同。
 
 ## 反馈
 
