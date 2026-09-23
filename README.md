@@ -1,10 +1,8 @@
 <div align="center">
   <h1 align="center">
-    <img src="./assets/screenshot/March7th.png" width="200">
     <br/>
     GGEA
   </h1>
-  <a href="https://trendshift.io/repositories/3892" target="_blank"><img src="https://trendshift.io/api/badge/repositories/3892" alt="moesnow%2FMarch7thAssistant | Trendshift" style="width: 200px; height: 46px;" width="250" height="46"/></a>
 </div>
 
 <br/>
@@ -28,16 +26,17 @@
 GGEA官方群：[1002150086](https://qm.qq.com/q/zkxGhEiVQQ)  
 
 ### 使用方式
-启动已安装游戏的 Android 模拟器（分辨率1920x1080），并开启 ADB 调试。解压并运行程序文件夹里的 `GGEA.exe`，在右上角「设置」中选择模拟器对应的 `adb.exe`；BlueStacks 用户选择 `HD-Adb.exe`。
-回到主界面点击「刷新」，确认选中的设备正确，自动任务需要模拟器输出 **1920×1080 横屏**截图。
-勾选任务并在非战斗界面点击「任务开始」
-
-更详细的设置和操作步骤在安装包的 `使用说明.txt` 中。
+启动已安装游戏的 Android 模拟器（分辨率 1920 x 1080），并开启 ADB 调试。解压并运行程序文件夹里的 `GGEA.exe`，在右上角「设置」中选择模拟器对应的 `adb.exe`；BlueStacks 用户选择 `HD-Adb.exe`。
+<br/>
+回到主界面点击「刷新」并选择具体使用的模拟器。
+<br/>
+勾选任务并在非战斗界面点击「任务开始」。
 
 ## 注意事项
-
+- 推荐使用 mumu 模拟器12，获得最佳的使用体验。
 - 支持 Windows 10/11 x64。安装包已包含 .NET 运行时，使用者不需要安装。
-- 目前仅支持1920x1080分辨率及游戏的简体中文模式，更多的分辨率及语言支持会在日后添加。
+- GGEA 支持多模拟器切换。
+- 目前仅支持 1920 x 1080 分辨率及游戏的简体中文模式，更多的分辨率及语言支持会在日后添加。
 - 「修复主界面 Billing 查询卡顿」是可选功能，仅适用于开启 Root 的 x86_64 Android 模拟器。启用期间游戏内购与恢复购买不可用；要使用这些功能，先关闭该选项并重启游戏。
 - `config\ap_consumption_profiles.json` 文件保存了当前的AP消耗方案配置。
 
@@ -60,5 +59,6 @@ Release 附件中还提供同名的 `.zip.sha256` 文件。例如校验 `v0.9.4.
 
 ## 问题反馈
 
-请在 [Issues](https://github.com/GundamCC/GGEA-Release/issues) 中写明 GGEA 版本、Windows 与模拟器环境、复现步骤，以及出问题前后的操作。日志位于解压目录的 `logs/`；上传日志或截图前，请先遮盖账号信息和其他私人内容。
+请在 [Issues](https://github.com/GundamCC/GGEA-Release/issues) 中写明 GGEA 版本、Windows 与模拟器环境、复现步骤，以及出问题前后的操作。日志位于解压目录的 `logs/`。
+<br/>
 或通过GGEA官方群：[1002150086](https://qm.qq.com/q/zkxGhEiVQQ)  进行BUG反馈、功能建议。
