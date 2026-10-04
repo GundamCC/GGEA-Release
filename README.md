@@ -18,6 +18,7 @@
 - **AP 消耗**：可自定义顺序及HARD关卡的主线作品略过，支持保存自定义配置。
 - **自动刷本**：自动周回对应的关卡，支持调节刷取次数与特殊情况出击。
 - **自动招募**：自动招募所有可招募的角色。
+- **自动推图**：自动将主线关卡推进到完成，包括普通与HARD关卡。
 - **铁球工厂**：自动制造铁球并解体，直到获得用户指定的GP数
 
 ## 快速开始
@@ -55,10 +56,11 @@ Release 附件中还提供同名的 `.zip.sha256` 文件。例如校验 `v0.9.4.
 
 ## 使用的项目
 
-- [.NET Runtime](https://github.com/dotnet/runtime) 与 [WPF](https://github.com/dotnet/wpf)：Windows 程序和界面。发布包采用自包含构建。
-- [OpenCvSharp](https://github.com/shimat/opencvsharp) `4.13.0.20260627` 与 [OpenCV](https://github.com/opencv/opencv)：截图解码和模板匹配；`OpenCvSharpExtern.dll` 随包提供。
-- [LSPlant](https://github.com/LSPosed/LSPlant) `6.4`、[xDL](https://github.com/hexhacking/xDL) `2.4.0`、[Dobby](https://github.com/jmpews/Dobby) `1.2` 与 [LLVM libc++](https://github.com/llvm/llvm-project/tree/llvmorg-18.1.8/libcxx)：用于可选的 Billing 功能。LSPlant、xDL 随包提供；Dobby 和 libc++ 静态链接到原生组件中。相关许可文件位于 `billing-runtime/licenses/`。
-- [Android Debug Bridge（ADB）](https://developer.android.com/tools/adb)：连接模拟器、截图和操作游戏；不包含在 GGEA 安装包里。
+- [.NET 8](https://dotnet.microsoft.com/en-us/) 与 [WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)：Windows 桌面程序与界面。正式包采用自包含构建，终端用户无需另行安装 .NET Runtime。
+- [OpenCvSharp 4.13.0.20260627](https://github.com/shimat/opencvsharp) 与 [OpenCV 4.13.0](https://opencv.org/)：图像解码和模板匹配；`OpenCvSharpExtern.dll` 随发布包提供。
+- [ONNX Runtime 1.23.2](https://github.com/microsoft/onnxruntime) 与 [PaddleOCR PP-OCRv5](https://github.com/PaddlePaddle/PaddleOCR)：在本机使用 CPU 识别关卡编号与 HARD 标题；模型及许可说明见 `resources/ocr/`。
+- [LSPlant 6.4](https://github.com/LSPosed/LSPlant)、[xDL 2.4.0](https://github.com/hexhacking/xDL)、[Dobby 1.2](https://github.com/jmpews/Dobby) 与 [LLVM libc++ 18.1.8](https://libcxx.llvm.org/)：用于可选 Billing 功能。相关许可随发布包放在 `billing-runtime/licenses/`。
+- [Android Debug Bridge (ADB)](https://developer.android.com/tools/adb)：连接模拟器、截图和发送操作；发布包不含 ADB，请使用模拟器自带版本或 Android SDK Platform-Tools。
 
 ## 问题反馈
 
