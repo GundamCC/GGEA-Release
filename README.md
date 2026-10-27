@@ -1,78 +1,30 @@
-<div align="center">
-  <h1 align="center">
-    <br/>
-    GGEA
-  </h1>
-</div>
-
-<br/>
-
-<div align="center">
-🌟 GGEA SD高达G世纪永恒小助手 🌟
-</div>
+# GGEA 旧客户端兼容发行入口
 
 [简体中文](README.md) | [日本語](README.ja.md)
 
-## 功能简介
+GGEA 的源码、产品介绍、问题反馈和后续正式发布统一由 [GGEA 主仓库](https://github.com/GundamCC/GGEA)维护。
 
-- **每日任务**：包含回收战舰、商店购买每日免费礼包、开发&强化一次、略过每日强化培育关卡、消耗AP及领取奖励，以上任务可通过拖拽排序改变执行顺序。
-- **领取奖励**：可领取邮件奖励及每日使命奖励，通过配置项可在其他每日任务完成后领取最终的每日使命奖励。
-- **AP 消耗**：可自定义顺序及HARD关卡的主线作品略过，支持保存自定义配置。
-- **自动刷本**：自动周回对应的关卡，支持调节刷取次数与特殊情况出击。
-- **自动招募**：自动招募所有可招募的角色。
-- **自动推图**：支持主线关卡推进至HARD结束、历史关卡含BOSS挑战、强敌来袭三个难度的自动推图。
-- **强敌来袭**：略过每日强敌来袭，支持将该任务添加到每日任务队列。
-- **大师联盟**：自动挑战大师联盟。
-- **铁球工厂**：自动制造铁球并解体，直到获得用户指定的GP数
+- [正式发布入口](https://github.com/GundamCC/GGEA/releases)
+- [使用与下载说明](https://github.com/GundamCC/GGEA#快速开始)
+- [问题反馈](https://github.com/GundamCC/GGEA/issues)
+- [日文说明](https://github.com/GundamCC/GGEA/blob/main/README.ja.md)
+- [旧版与过渡包下载](https://github.com/GundamCC/GGEA-Release/releases)
+- [社区 QQ 群](https://qm.qq.com/q/zkxGhEiVQQ)
 
-## 快速开始
-### 下载方式
-#### 方式一：GitHub Releases（推荐）
-前往 [Releases](https://github.com/GundamCC/GGEA-Release/releases) 下载最新版本:
-#### 方式二：QQ群组文件下载
-GGEA官方群：[1002150086](https://qm.qq.com/q/zkxGhEiVQQ)  
+## 当前状态
 
-### 使用方式
-启动已安装游戏的 Android 模拟器（分辨率 1920 x 1080），并开启 ADB 调试。
-<br/>
-解压并运行程序文件夹里的 `GGEA.exe`，在右上角「设置」中选择模拟器对应的 `adb.exe`；BlueStacks 用户选择 `HD-Adb.exe`。
-<br/>
-在设置中选择使用的服务器及语言，回到主界面点击「刷新」并选择具体使用的模拟器。
-<br/>
-选择对应功能并开始任务。
+迁移代码与说明正在准备，迁移版尚未发布。主仓库没有正式安装包时，请继续使用本仓库已有的正式包；不要根据源码版本猜测附件地址。已有发布记录与下载附件保持原位，历史下架记录不代表附件恢复可用。
 
-## 注意事项
-- 推荐使用 mumu 模拟器或雷电模拟器，获得最佳的使用体验。
-- 目前支持的服务器：国际服、日服。
-- 目前支持的游戏语言：简体中文、日语。
-- 已验证的模拟器：mumu模拟器6、mumu模拟器12、雷电14、BlueStacks 5。
-- 支持 Windows 10/11 x64。安装包已包含 .NET 运行时，使用者不需要安装。
-- GGEA 支持多模拟器切换。
-- 目前仅支持 1920 x 1080 分辨率，游戏语言支持简体中文与日语。
-- 「修复主界面 Billing 查询卡顿」是可选功能，仅适用于开启 Root 的 x86_64 Android 模拟器。启用期间游戏内购与恢复购买不可用；要使用这些功能，先关闭该选项并重启游戏。
-- `config\ap_consumption_profiles.json` 文件保存了当前的AP消耗方案配置。
+## 兼容职责
 
-## 校验下载
+旧客户端固定请求本仓库的最新正式 Release，并严格校验附件属于本仓库。因此，本仓库保留已有下载、必要的过渡 Release，以及根目录 `update-sources.json`。空来源列表是有效的 v1 配置，不是主发布地址重定向，也不会自动把旧客户端切换到新仓库。
 
-Release 附件中还提供同名的 `.zip.sha256` 文件。例如校验 `v0.9.4.1`：
+未来获得发布授权后，使用与主仓库完全相同的已验证过渡 ZIP 和 SHA-256 文件在此发布；旧客户端安装过渡包后，由新程序访问 GGEA 主仓库。不能只创建一条外链 Release，也不能把本仓库的附件 URL 改成新仓库 URL。
 
-```powershell
-(Get-FileHash -Algorithm SHA256 -LiteralPath '.\GGEA-v0.9.4.1-win-x64.zip').Hash.ToLowerInvariant()
-```
+[发布与验证顺序](https://github.com/GundamCC/GGEA/blob/main/docs/release-migration.md)。过渡发布及旧客户端升级链路未经验证前，不能关闭兼容入口；之后也不删除已有下载或来源发现文件。本仓库不再独立维护完整产品介绍，后续常规版本在主仓库发布。
 
-输出应与 `.zip.sha256` 的第一列一致。包内 `build-info.json` 记录源码提交和文件摘要。SHA-256 用于检查下载是否完整，不是数字签名。
+## 校验与历史说明
 
-## 使用的项目
+下载 ZIP 时同时下载同名 `.zip.sha256`，使用 PowerShell `Get-FileHash -Algorithm SHA256` 核对摘要。SHA-256 用于完整性检查，不是数字签名；包内 `build-info.json` 记录源码提交及文件摘要。
 
-- [.NET 8](https://dotnet.microsoft.com/en-us/) 与 [WPF](https://learn.microsoft.com/en-us/dotnet/desktop/wpf/overview/)：Windows 桌面程序与界面。正式包采用自包含构建，终端用户无需另行安装 .NET Runtime。
-- [OpenCvSharp 4.13.0.20260627](https://github.com/shimat/opencvsharp) 与 [OpenCV 4.13.0](https://opencv.org/)：图像解码和模板匹配；`OpenCvSharpExtern.dll` 随发布包提供。
-- [ONNX Runtime 1.23.2](https://github.com/microsoft/onnxruntime) 与 [PaddleOCR PP-OCRv5](https://github.com/PaddlePaddle/PaddleOCR)：在本机使用 CPU 识别关卡编号与 HARD 标题；模型及许可说明见 `resources/ocr/`。
-- [LSPlant 6.4](https://github.com/LSPosed/LSPlant)、[xDL 2.4.0](https://github.com/hexhacking/xDL)、[Dobby 1.2](https://github.com/jmpews/Dobby) 与 [LLVM libc++ 18.1.8](https://libcxx.llvm.org/)：用于可选 Billing 功能。相关许可随发布包放在 `billing-runtime/licenses/`。
-- [Android Debug Bridge (ADB)](https://developer.android.com/tools/adb)：连接模拟器、截图和发送操作；发布包不含 ADB，请使用模拟器自带版本或 Android SDK Platform-Tools。
-
-## 问题反馈
-
-请在 [Issues](https://github.com/GundamCC/GGEA-Release/issues) 中写明 GGEA 版本、Windows 与模拟器环境、复现步骤，以及出问题前后的操作。日志位于解压目录的 `logs/`。
-<br/>
-或通过GGEA官方群：[1002150086](https://qm.qq.com/q/zkxGhEiVQQ)  进行BUG反馈、功能建议。
-
+历史版本说明保留在 `releases/`，以对应包内容为准。当前主程序的[许可范围](https://github.com/GundamCC/GGEA/blob/main/LICENSE_SCOPE.md)与[第三方声明](https://github.com/GundamCC/GGEA/blob/main/resources/common/licenses/NOTICE.txt)不能替代旧包自己的许可文件；可选插件说明在 [GGEA-Extensions](https://github.com/GundamCC/GGEA-Extensions)。
