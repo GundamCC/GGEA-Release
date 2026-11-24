@@ -2,10 +2,11 @@
 
 [简体中文](README.md) | 日本語
 
-> [!IMPORTANT]
-> **[GGEA の新しいオープンソースリポジトリへ → GundamCC/GGEA](https://github.com/GundamCC/GGEA)**
->
-> 初めての方はメインリポジトリから[最新の正式版をダウンロード](https://github.com/GundamCC/GGEA/releases/latest)してください。ソースコードの閲覧、使い方の確認、不具合の報告もメインリポジトリで行えます。
+## [GGEA の新しいオープンソースリポジトリへ](https://github.com/GundamCC/GGEA)
+
+[![GundamCC/GGEA メインリポジトリを開く](assets/main-repository.svg)](https://github.com/GundamCC/GGEA)
+
+初めての方はメインリポジトリから[最新の正式版をダウンロード](https://github.com/GundamCC/GGEA/releases/latest)してください。ソースコードの閲覧、使い方の確認、不具合の報告もメインリポジトリで行えます。
 
 - [正式リリース](https://github.com/GundamCC/GGEA/releases)
 - [日本語の使い方](https://github.com/GundamCC/GGEA/blob/main/README.ja.md)
