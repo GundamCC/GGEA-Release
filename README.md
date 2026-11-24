@@ -2,7 +2,10 @@
 
 [简体中文](README.md) | [日本語](README.ja.md)
 
-GGEA 的源码、产品介绍、问题反馈和后续正式发布统一由 [GGEA 主仓库](https://github.com/GundamCC/GGEA)维护。
+> [!IMPORTANT]
+> **[前往 GGEA 新开源仓库 → GundamCC/GGEA](https://github.com/GundamCC/GGEA)**
+>
+> 首次使用请到主仓库[下载最新正式版](https://github.com/GundamCC/GGEA/releases/latest)。查看源码、阅读使用说明和反馈问题也请前往主仓库。
 
 - [正式发布入口](https://github.com/GundamCC/GGEA/releases)
 - [使用与下载说明](https://github.com/GundamCC/GGEA#快速开始)
